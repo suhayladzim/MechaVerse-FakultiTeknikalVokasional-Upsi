@@ -85,7 +85,7 @@
     <!-- AUDIO BACKGROUND -->
     <!-- GANTIKAN PAUTAN src DI BAWAH DENGAN FILE .mp3 ANDA -->
     <audio id="bg-music" loop autoplay>
-        <source src="nama_file_audio_anda.mp3" type="audio/mpeg">
+        <source src="lagu.mp3" type="audio/mpeg">
         Pelayar anda tidak menyokong elemen audio.
     </audio>
 
@@ -165,7 +165,7 @@
                                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-80 -z-10"></div>
                                <video autoplay loop muted playsinline class="w-full h-full object-cover relative z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500">
                                   <!-- GANTIKAN PAUTAN DI BAWAH DENGAN video_utama.mp4 ANDA -->
-                                  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                                  <source src="video-utama.mp4" type="video/mp4" />
                                   Pelayar anda tidak menyokong tag video ini.
                                </video>
                             </div>
@@ -271,7 +271,7 @@
                                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-80 -z-10"></div>
                                <video autoplay loop muted playsinline class="w-full h-full object-cover relative z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500">
                                   <!-- GANTIKAN PAUTAN DI BAWAH DENGAN video_pengenalan.mp4 ANDA -->
-                                  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                                  <source src="video-pengenalan.mp4" type="video/mp4" />
                                   Pelayar anda tidak menyokong tag video ini.
                                </video>
                             </div>
@@ -449,7 +449,7 @@
                         <div class="reveal-item reveal-fade-up relative w-full" style="transition-delay: 100ms;">
                             <div class="relative z-10 w-full aspect-video glass-panel border-2 border-orange-500/50 rounded-2xl overflow-hidden box-glow group bg-slate-900/50 flex items-center justify-center">
                                <!-- GANTIKAN PAUTAN src DI BAWAH DENGAN gambar_kumpulan.png ANDA -->
-                               <img src="https://via.placeholder.com/800x450/0f172a/f97316?text=Sila+masukkan+gambar+.png+anda+di+sini" alt="Gambar Ahli Kumpulan" class="w-full h-full object-cover relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                               <img src="ayu.png" alt="Gambar Ahli Kumpulan" class="w-full h-full object-cover relative z-10 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                             </div>
                         </div>
                   
@@ -536,36 +536,36 @@
                 description: 'Gear ialah komponen mekanikal yang mempunyai gigi pada lilitannya. Ia digunakan untuk memindahkan kuasa dan kelajuan putaran dari satu aci ke aci yang lain.',
                 functions: ['Memindahkan kuasa dan tork mekanikal', 'Menukar arah pergerakan putaran', 'Meningkatkan atau mengurangkan kelajuan'],
                 examples: ['Kereta', 'Mesin Gerudi', 'Jam Tangan Mekanikal'],
-                modelUrl: 'https://modelviewer.dev/assets/ShopifyModels/Mixer.glb'
+                modelUrl: 'gear.glb'
             },
             {
                 id: 'pautan', title: 'Pautan (Linkage)',
                 description: 'Komponen ini berfungsi sebagai penghubung untuk memindahkan pergerakan dari satu bahagian mesin ke bahagian yang lain secara harmoni.',
                 functions: ['Menghubungkan komponen bebas', 'Menukar satu jenis pergerakan ke pergerakan lain', 'Memindahkan daya dengan efisien'],
                 examples: ['Wiper cermin kereta', 'Lengan Robotik', 'Sistem Kunci Pintu'],
-                modelUrl: 'https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/ToyCar/glTF-Binary/ToyCar.glb'
+                modelUrl: 'pautan.glb'
             },
             {
                 id: 'takal', title: 'Takal & Tali Sawat',
                 description: 'Takal adalah roda beralur di mana tali sawat dilalukan. Sistem ini amat berkesan memindahkan kuasa antara dua aci pada jarak yang jauh.',
                 functions: ['Memindahkan gerakan pada jarak yang jauh', 'Memudahkan beban berat diangkat', 'Beroperasi secara lebih senyap dari gear'],
                 examples: ['Mesin Jahit', 'Kren Pengangkut', 'Enjin Kenderaan'],
-                modelUrl: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb'
+                modelUrl: 'takal.glb'
             },
             {
                 id: 'aci_galas', title: 'Aci & Galas (Shaft & Bearing)',
                 description: 'Aci memindahkan daya putaran ke bahagian lain, manakala galas (bearing) diletakkan pada aci untuk menyokongnya dan mengurangkan geseran.',
                 functions: ['Aci memindahkan kuasa putaran paksi', 'Galas meminimumkan geseran semasa putaran', 'Menyokong integriti struktur bergerak'],
                 examples: ['Roda Basikal', 'Kipas Angin', 'Motor Elektrik'],
-                modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb'
+                modelUrl: 'aci.glb'
             }
         ];
 
         const APPLICATIONS_DATA = [
-            { name: 'Basikal', parts: ['Gear', 'Rantai', 'Sproket'], func: 'Membantu memindahkan kuasa kayuhan kepada roda belakang secara efisien untuk pergerakan.', modelUrl: 'https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/ToyCar/glTF-Binary/ToyCar.glb' },
-            { name: 'Mesin Jahit', parts: ['Gear', 'Takal'], func: 'Menggerakkan jarum jahitan secara berterusan dengan ritma yang seragam ke atas dan ke bawah.', modelUrl: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb' },
-            { name: 'Pengisar', parts: ['Aci', 'Gear'], func: 'Memutarkan bilah pemotong pada kelajuan tinggi untuk memproses dan menghancurkan makanan.', modelUrl: 'https://modelviewer.dev/assets/ShopifyModels/Mixer.glb' },
-            { name: 'Jam Mekanikal', parts: ['Gear'], func: 'Mengawal pergerakan jarum jam dengan ketepatan tinggi melalui susunan sistem gear yang kompleks.', modelUrl: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb' }
+            { name: 'Basikal', parts: ['Gear', 'Rantai', 'Sproket'], func: 'Membantu memindahkan kuasa kayuhan kepada roda belakang secara efisien untuk pergerakan.', modelUrl: 'basikal.glb' },
+            { name: 'Mesin Jahit', parts: ['Gear', 'Takal'], func: 'Menggerakkan jarum jahitan secara berterusan dengan ritma yang seragam ke atas dan ke bawah.', modelUrl: 'mesin.glb' },
+            { name: 'Pengisar', parts: ['Aci', 'Gear'], func: 'Memutarkan bilah pemotong pada kelajuan tinggi untuk memproses dan menghancurkan makanan.', modelUrl: 'pengisar.glb' },
+            { name: 'Jam Mekanikal', parts: ['Gear'], func: 'Mengawal pergerakan jarum jam dengan ketepatan tinggi melalui susunan sistem gear yang kompleks.', modelUrl: 'jam.glb' }
         ];
 
         const PAGE_ORDER = ['utama', 'pengenalan', 'komponen', 'aplikasi', 'gamifikasi', 'cikgu-ai', 'maklumat'];
